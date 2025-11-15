@@ -7,24 +7,17 @@ import Footer from '@/components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
-// Metadata for SEO
 export const metadata: Metadata = {
   title: 'DARIUS Pharmaceuticals - Upholding the Good in Health | Best Pharma In Aurangabad Bihar',
   description: 'DARIUS Pharmaceuticals is a leading pharmaceutical company providing innovative solutions for bacterial infections, neuropathy & bone health.',
+  icons: {
+    icon: "/logos/darius-crop-logo.webp"
+  }
 }
 
-// Root layout component
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Add favicon */}
-        <link rel="icon" href="/logos/Darius crop Logo.webp" type="image/webp" />
-      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
